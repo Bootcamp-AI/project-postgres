@@ -1,4 +1,4 @@
-#Data Modeling with Postgres
+# Data Modeling with Postgres
 This project is a sample data pipeline project. 
 It reads some json log and song data file from the directory
 called 'data' and process it or transform it. Finally it stores 
