@@ -3,11 +3,23 @@ from sql_queries import create_table_queries, drop_table_queries, insert_table_q
 
 
 def create_database():
-    conn = psycopg2.connect("host=127.0.0.1 dbname=studentdb user=postgres password=password")
+    conn = psycopg2.connect(
+        dbname="postgres",
+        user="postgres",
+        password="password",
+        host="localhost",
+        port=5432
+    )
     conn.set_session(autocommit=True)
     cur = conn.cursor()
     conn.close()
-    conn = psycopg2.connect("host=127.0.0.1 dbname=sparkifydb user=postgres password=password")
+    conn = psycopg2.connect(
+        dbname="postgres",
+        user="postgres",
+        password="password",
+        host="localhost",
+        port=5432
+    )
     cur = conn.cursor()
     return cur, conn
 
