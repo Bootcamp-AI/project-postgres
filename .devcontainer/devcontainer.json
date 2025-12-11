@@ -1,0 +1,24 @@
+{
+  "name": "BAI Env",
+  "image": "mcr.microsoft.com/devcontainers/python:0-3.11-bullseye",
+  "features": {
+    // Instalamos PostgreSQL
+    "ghcr.io/itsmechlark/features/postgresql:1": {
+      "version": "latest",
+      "username": "postgres",
+      "password": "password", 
+      "dbName": "postgres"
+    }
+  },
+  // Opcional: Instalar librerías de Python automáticamente
+  "postCreateCommand": "pip install psycopg2-binary pandas sql-queries numpy",
+
+	"customizations": {
+		"codespaces": {
+			"openFiles": [
+			  "README.md"
+			]
+		}
+	}
+
+}
