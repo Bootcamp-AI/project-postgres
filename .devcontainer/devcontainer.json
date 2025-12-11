@@ -10,7 +10,8 @@
     }
   },
   // Ejecutar un script para instalar librerías y crear las DBs
-  "postCreateCommand": "pip install ipython-sql psycopg2-binary pandas sql-queries numpy && chmod +x ./create_dbs.sh && ./create_dbs.sh", 
+  "postCreateCommand": "pip install ipython-sql psycopg2-binary pandas sql-queries numpy", 
+  "postStartCommand": "chmod +x ./create_dbs.sh && ./create_dbs.sh",
 
   "customizations": {
     "codespaces": {
